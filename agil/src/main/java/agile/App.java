@@ -20,24 +20,11 @@ public class App
           float firstNum = sc.nextFloat ();
           System.out.println ("\n Please enter second number: \n");
           float secondNum = sc.nextFloat ();
-          switch (operation)
-        {
-          case '1':
-          System.out.println ("The result of calculation is: " + (firstNum + secondNum));
-          break;
-    
-          case '2':System.out.println ("The result of calculation is: " + (firstNum - secondNum));
-          break;
-    
-          case '3':System.out.println ("The result of calculation is: " + (firstNum * secondNum));
-          break;
-    
-          case '4':System.out.println ("The result of calculation is: " + (firstNum / secondNum));
-          break;
-    
-          default:System.out.println ("\n Please select a valid operation");
-    
-        }
+
+          float result = Calculate(firstNum, secondNum, operation);
+
+          System.out.println ("The result of calculation is: " + result);
+          
         }
         catch (Exception e)
         {
@@ -48,5 +35,31 @@ public class App
         {
           sc.close ();
         }
+      }
+
+      public static float Calculate(float firstNum, float secondNum, char operation){
+
+        float result = 0;
+
+        switch (operation)
+        {
+          case '1':
+          result = firstNum + secondNum;
+          break;
+    
+          case '2':result = firstNum - secondNum;
+          break;
+    
+          case '3':result = firstNum * secondNum;
+          break;
+    
+          case '4':result = firstNum / secondNum;
+          break;
+    
+          default:System.out.println ("\n Please select a valid operation");
+    
+        }
+
+        return result;
       }
 }

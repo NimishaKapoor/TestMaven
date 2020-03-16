@@ -1,5 +1,6 @@
 package agile;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -15,6 +16,9 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+        int i = 10;
+        int j = 20;
+        assertTrue( i < j );
+        //assertEquals("Enter a Valid Operation", expected, actual);
     }
 }
